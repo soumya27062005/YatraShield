@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* YatraShield Design System - India-focused colors, gradients, and animations */
+
+@layer base {
+  :root {
+    /* Core brand colors - HSL for consistency */
+    --background: 250 100% 98%;
+    --foreground: 220 84% 15%;
+
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 220 84% 15%;
+
+    /* Popover surfaces */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 84% 15%;
+
+    /* YatraShield Brand Colors */
+    /* Deep Blue - Trust & Authority */
+    --primary: 220 85% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 220 70% 40%;
+    --primary-dark: 220 90% 15%;
+
+    /* Safety Green - Security & Safe zones */
+    --safety: 145 70% 30%;
+    --safety-foreground: 0 0% 98%;
+    --safety-light: 145 50% 45%;
+    --safety-dark: 145 85% 20%;
+
+    /* Saffron Orange - India & Alerts */
+    --saffron: 25 90% 55%;
+    --saffron-foreground: 220 85% 15%;
+    --saffron-light: 25 85% 70%;
+    --saffron-dark: 25 95% 40%;
+
+    /* Warning & Danger zones */
+    --warning: 45 95% 60%;
+    --warning-foreground: 220 85% 15%;
+    --danger: 0 85% 60%;
+    --danger-foreground: 0 0% 98%;
+
+    /* Secondary colors */
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 220 85% 25%;
+
+    /* Muted colors */
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 20% 55%;
+
+    /* Accent colors */
+    --accent: 220 15% 96%;
+    --accent-foreground: 220 85% 25%;
+
+    /* Destructive colors */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border and input colors */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 85% 25%;
+
+    /* Radius */
+    --radius: 0.5rem;
+
+    /* Gradients - YatraShield themed */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--safety)) 50%, hsl(var(--saffron)) 100%);
+    --gradient-shield: linear-gradient(145deg, hsl(var(--primary-light)) 0%, hsl(var(--primary-dark)) 100%);
+    --gradient-safety: linear-gradient(135deg, hsl(var(--safety-light)) 0%, hsl(var(--safety-dark)) 100%);
+    --gradient-alert: linear-gradient(135deg, hsl(var(--saffron-light)) 0%, hsl(var(--saffron-dark)) 100%);
+    --gradient-india: linear-gradient(0deg, hsl(var(--saffron)) 0%, hsl(0 0% 100%) 33%, hsl(145 70% 30%) 66%, hsl(220 85% 25%) 100%);
+
+    /* Shadows with brand colors */
+    --shadow-primary: 0 10px 25px -5px hsl(var(--primary) / 0.3);
+    --shadow-safety: 0 10px 25px -5px hsl(var(--safety) / 0.3);
+    --shadow-saffron: 0 10px 25px -5px hsl(var(--saffron) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.4);
+
+    /* Animation durations and easings */
+    --animation-fast: 0.15s;
+    --animation-normal: 0.3s;
+    --animation-slow: 0.5s;
+    --easing-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Sidebar variables */
+    --sidebar-background: 250 100% 98%;
+    --sidebar-foreground: 220 84% 15%;
+    --sidebar-primary: 220 85% 25%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 15% 96%;
+    --sidebar-accent-foreground: 220 85% 25%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 220 85% 25%;
+  }
+
+  .dark {
+    --background: 220 84% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 84% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 84% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 220 70% 60%;
+    --primary-foreground: 220 84% 8%;
+    --primary-light: 220 60% 70%;
+    --primary-dark: 220 80% 45%;
+
+    --safety: 145 60% 50%;
+    --safety-foreground: 220 84% 8%;
+    --safety-light: 145 50% 60%;
+    --safety-dark: 145 70% 35%;
+
+    --saffron: 25 85% 65%;
+    --saffron-foreground: 220 84% 8%;
+    --saffron-light: 25 80% 75%;
+    --saffron-dark: 25 90% 50%;
+
+    --secondary: 220 32% 17%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 32% 17%;
+    --muted-foreground: 220 20% 70%;
+
+    --accent: 220 32% 17%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 220 32% 17%;
+    --input: 220 32% 17%;
+    --ring: 220 70% 60%;
+
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--safety)) 50%, hsl(var(--saffron)) 100%);
+    --gradient-shield: linear-gradient(145deg, hsl(var(--primary-light)) 0%, hsl(var(--primary-dark)) 100%);
+
+    --sidebar-background: 220 84% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 220 70% 60%;
+    --sidebar-primary-foreground: 220 84% 8%;
+    --sidebar-accent: 220 32% 17%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 32% 17%;
+    --sidebar-ring: 220 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+@layer components {
+  /* YatraShield specific component styles */
+  
+  .hero-section {
+    background: var(--gradient-hero);
+    @apply relative overflow-hidden;
+  }
+
+  .shield-card {
+    background: var(--gradient-shield);
+    @apply rounded-xl shadow-lg border border-white/20;
+  }
+
+  .safety-indicator {
+    @apply flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .safety-safe {
+    @apply bg-safety/10 text-safety border border-safety/30;
+  }
+
+  .safety-warning {
+    @apply bg-warning/10 text-warning border border-warning/30;
+  }
+
+  .safety-danger {
+    @apply bg-danger/10 text-danger border border-danger/30;
+  }
+
+  .india-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--saffron) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--safety) / 0.1) 0%, transparent 50%);
+  }
+
+  /* SOS Button pulse animation */
+  .sos-pulse {
+    animation: sos-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes sos-pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 hsl(var(--danger) / 0.7);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 10px hsl(var(--danger) / 0);
+    }
+  }
+
+  /* Shield protection animation */
+  .shield-glow {
+    animation: shield-glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes shield-glow {
+    from {
+      box-shadow: var(--shadow-primary);
+    }
+    to {
+      box-shadow: var(--shadow-glow);
+    }
+  }
+
+  /* Map zone animations */
+  .zone-safe {
+    @apply bg-safety/20 border-2 border-safety animate-pulse;
+  }
+
+  .zone-warning {
+    @apply bg-warning/20 border-2 border-warning;
+  }
+
+  .zone-danger {
+    @apply bg-danger/20 border-2 border-danger animate-pulse;
+  }
+}
